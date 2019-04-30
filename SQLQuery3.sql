@@ -35,9 +35,16 @@ drop Constraint FK__Groups__teacher___3C69FB99
 alter table Groups
 Add teacherid int References Teachers(id)
 
+
+>>>>>>Create View ApartmentInfo as<<<<
+
+
+
 Select st.Fullname,st.Email,gt.Name,ts.Fullname
 from Students st
 JOIN Groups gt 
 on st.group_id=gt.id
 Join Teachers ts
 On gt.teacherid=ts.id
+
+
